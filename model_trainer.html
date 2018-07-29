@@ -68,7 +68,6 @@
     }
 
 
-
     </style>
 
 </head>
@@ -411,12 +410,12 @@
               </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li class="active">
-                            <a href="javascript:;">
+                        <li>
+                            <a href="./index.html">
                                 <i class="fa fa-file-image-o"></i>图片管理</a>
                         </li>
-                        <li>
-                            <a href="./model_trainer.html">
+                        <li class="active">
+                            <a href="javascript:;">
                                 <i class="fa fa-cube"></i>模型训练</a>
                         </li>
                     </ul>
@@ -455,24 +454,7 @@
                                         <a href="#tab_1" data-toggle="tab">概览</a>
                                     </li>
                                     <li>
-                                        <a href="#tab_2" data-toggle="tab">文件管理</a>
-                                    </li>
-                                    <li>
-                                        <a href="#tab_3" data-toggle="tab">图片处理</a>
-                                    </li>
-                                    <li>
-                                        <a href="#tab_3" data-toggle="tab">基础数据</a>
-                                    </li>
-                                    <li>
-                                        <a href="#tab_3" data-toggle="tab">数据统计</a>
-                                    </li>
-                                    <li>
-                                        <a href="#tab_3" data-toggle="tab">文件访问统计</a>
-                                    </li>
-                                    <li class="pull-right">
-                                        <a href="#" class="text-muted">
-                                            <i class="fa fa-gear"></i>
-                                        </a>
+                                        <a href="#tab_2" data-toggle="tab">GPU服务器</a>
                                     </li>
                                 </ul>
 
@@ -482,200 +464,21 @@
                                         <!-- Info boxes -->
                                         <h5 style="color: gray;">系统数据</h5>
                                         <br>
-                                        <div class="alert alert-info alert-dismissible">
-                                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
-                                                ×
-                                            </button>
-                                            <span style="color: gray;font-size: 13px;">
-                          系统数据每5分钟更新
-                        </span>
-                                        </div>
                                         <div class="row">
-                                            <div class="col-md-3 ">
-                                                <div class="info-box">
-                            <span class="info-box-icon ">
-                              <i class="fa fa-desktop"></i>
-                            </span>
-                                                    <div class="info-box-content">
-                                                        <span class="info-box-text">CPU 占用</span>
-                                                        <span class="info-box-number">90
-                                <small>%</small>
-                              </span>
-                                                    </div>
-                                                    <!-- /.info-box-content -->
-                                                </div>
-                                                <!-- /.info-box -->
+                                            <div class="col-md-12">
+                                                <a class="btn btn-app">
+                                                    <i class="fa fa-desktop"></i> 服务器01
+                                                </a>
+                                                <a class="btn btn-app">
+                                                    <i class="fa fa-desktop"></i> 服务器02
+                                                </a>
+                                                <a class="btn btn-app">
+                                                    <i class="fa fa-plus"></i> 添加
+                                                </a>
                                             </div>
-                                            <!-- /.col -->
-                                            <div class="col-md-3">
-                                                <div class="info-box">
-                            <span class="info-box-icon bg-red">
-                              <i class="fa fa-database"></i>
-                            </span>
-
-                                                    <div class="info-box-content">
-                                                        <span class="info-box-text">系统内存</span>
-                                                        <span class="info-box-number">41,410</span>
-                                                    </div>
-                                                    <!-- /.info-box-content -->
-                                                </div>
-                                                <!-- /.info-box -->
-                                            </div>
-                                            <!-- /.col -->
-                                            <div class="col-md-3">
-                                                <div class="info-box">
-                            <span class="info-box-icon bg-green">
-                              <i class="fa fa-cubes"></i>
-                            </span>
-
-                                                    <div class="info-box-content">
-                                                        <span class="info-box-text">GPU占比</span>
-                                                        <span class="info-box-number">76</span>
-                                                    </div>
-                                                    <!-- /.info-box-content -->
-                                                </div>
-                                                <!-- /.info-box -->
-                                            </div>
-                                            <!-- /.col -->
-                                            <div class="col-md-3">
-                                                <div class="info-box">
-                            <span class="info-box-icon bg-yellow">
-                              <i class="fa fa-users"></i>
-                            </span>
-                                                    <div class="info-box-content">
-                                                        <span class="info-box-text">访问流量</span>
-                                                        <span class="info-box-number">2,000</span>
-                                                    </div>
-                                                    <!-- /.info-box-content -->
-                                                </div>
-                                                <!-- /.info-box -->
-                                            </div>
-                                            <!-- /.col -->
-
-                                            <!-- /.col -->
-                                            <div class="col-md-3">
-                                                <div class="info-box">
-                            <span class="info-box-icon bg-green">
-                              <i class="fa fa-check-square"></i>
-                            </span>
-                                                    <div class="info-box-content">
-                                                        <span class="info-box-text">训练服务器连接状态</span>
-                                                        <span class=""
-                                                              style="color:gray;font-size:11px;">已连接&nbsp;</span>
-                                                        <button id="connect_trainer_btn" class="btn btn-xs">
-                                                            <span class="fa fa-stop" style="color: red;"></span>
-                                                        </button>
-                                                    </div>
-                                                    <!-- /.info-box-content -->
-                                                </div>
-                                                <!-- /.info-box -->
-                                            </div>
-
-                                            <!-- /.col -->
-                                            <div class="col-md-3">
-                                                <div class="info-box">
-                              <span class="info-box-icon bg-red">
-                                <i class="fa fa-exclamation-triangle"></i>
-                              </span>
-                                                    <div class="info-box-content">
-                                                        <span class="info-box-text">应用服务器连接状态</span>
-                                                        <span class=""
-                                                              style="color:gray;font-size:11px;">未连接&nbsp;</span>
-                                                        <button class="btn btn-xs">
-                                                            <span class="fa fa-play" style="color: green;"></span>
-                                                        </button>
-                                                    </div>
-                                                    <!-- /.info-box-content -->
-                                                </div>
-                                                <!-- /.info-box -->
-                                            </div>
-
+                                            <!--<div class="col-md-2"></div>-->
                                         </div>
-                                        <!-- /.row -->
-                                        <h5 style="color: gray;">基础数据</h5>
-                                        <br>
-                                        <div class="row">
-                                            <div class="col-sm-3 col-xs-6">
-                                                <div class="description-block border-right">
-                            <span class="description-percentage text-green">
-                              <i class="fa fa-caret-up"></i> 17%</span>
-                                                    <h5 class="description-header">100 G</h5>
-                                                    <span class="description-text">空间总量</span>
-                                                </div>
-                                                <!-- /.description-block -->
-                                            </div>
-                                            <!-- /.col -->
-                                            <div class="col-sm-3 col-xs-6">
-                                                <div class="description-block border-right">
-                            <span class="description-percentage text-yellow">
-                              <i class="fa fa-caret-left"></i> 0%</span>
-                                                    <h5 class="description-header">10 G</h5>
-                                                    <span class="description-text">剩余空间</span>
-                                                </div>
-                                                <!-- /.description-block -->
-                                            </div>
-                                            <!-- /.col -->
-                                            <div class="col-sm-3 col-xs-6">
-                                                <div class="description-block border-right">
-                            <span class="description-percentage text-green">
-                              <i class="fa fa-caret-up"></i> 20%</span>
-                                                    <h5 class="description-header">24,813,53</h5>
-                                                    <span class="description-text">照片总数</span>
-                                                </div>
-                                                <!-- /.description-block -->
-                                            </div>
-                                            <!-- /.col -->
-                                            <div class="col-sm-3 col-xs-6">
-                                                <div class="description-block">
-                            <span class="description-percentage text-red">
-                              <i class="fa fa-caret-down"></i> 18%</span>
-                                                    <h5 class="description-header">1200</h5>
-                                                    <span class="description-text">访问量</span>
-                                                </div>
-                                                <!-- /.description-block -->
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-3 col-xs-6">
-                                                <div class="description-block border-right">
-                            <span class="description-percentage text-green">
-                              <i class="fa fa-caret-up"></i> 17%</span>
-                                                    <h5 class="description-header">100 G</h5>
-                                                    <span class="description-text">空间总量</span>
-                                                </div>
-                                                <!-- /.description-block -->
-                                            </div>
-                                            <!-- /.col -->
-                                            <div class="col-sm-3 col-xs-6">
-                                                <div class="description-block border-right">
-                            <span class="description-percentage text-yellow">
-                              <i class="fa fa-caret-left"></i> 0%</span>
-                                                    <h5 class="description-header">10 G</h5>
-                                                    <span class="description-text">剩余空间</span>
-                                                </div>
-                                                <!-- /.description-block -->
-                                            </div>
-                                            <!-- /.col -->
-                                            <div class="col-sm-3 col-xs-6">
-                                                <div class="description-block border-right">
-                            <span class="description-percentage text-green">
-                              <i class="fa fa-caret-up"></i> 20%</span>
-                                                    <h5 class="description-header">24,813,53</h5>
-                                                    <span class="description-text">照片总数</span>
-                                                </div>
-                                                <!-- /.description-block -->
-                                            </div>
-                                            <!-- /.col -->
-                                            <div class="col-sm-3 col-xs-6">
-                                                <div class="description-block">
-                            <span class="description-percentage text-red">
-                              <i class="fa fa-caret-down"></i> 18%</span>
-                                                    <h5 class="description-header">1200</h5>
-                                                    <span class="description-text">访问量</span>
-                                                </div>
-                                                <!-- /.description-block -->
-                                            </div>
-                                        </div>
+
                                         <HR>
                                         <h5 style="color: gray;">设置</h5>
                                         <br>
@@ -969,6 +772,17 @@
   function test() {
 
   }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
